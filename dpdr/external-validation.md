@@ -68,6 +68,53 @@ Everything below is stated in one of those three currencies.
 
 ---
 
+### Independent corroboration of the *phenomenon*, kept separate from the quantitative legs
+
+The quantitative legs below test the model. There is also a different and weaker kind
+of external evidence, which should not be confused with them: **the phenomenon itself,
+and four of its five features, are independently attested across contemplative
+traditions that had no contact with each other or with this model.** It is recorded here
+because it bears directly on §0's circularity problem — *is the target idiosyncratic to
+the one source report?* — and not because it validates any dynamics.
+
+Seven traditions, each with its own term for the failure and its own written remedy
+(passages and citations in `source-library-passages.md`, from the Source Library's
+AI-translated corpus):
+
+| tradition | native term | the features it attests |
+|---|---|---|
+| Theravāda (Buddhaghosa, *Visuddhimagga* ch. 20) | *vipassanupakkilesa*; *nikanti* | arises **only** to one who practises *properly and with repeated effort*; the tenth is **clinging** |
+| Korean Sŏn (Chinul, *Susimgyŏl*) | 風狂 "wind-mad" / Zen sickness | a named catastrophe; "**the more you fight them, the more intense they become**" |
+| Chinese internal alchemy (*Sancai Tuhui*, 1609) | 走火 "Fire Deviation" | a **catalogued injury**; caused by "**lacks proper guidance**" or improper focus |
+| Orthodox Hesychasm (*Philokalia*, 1793) | *prelest* | a **dedicated chapter** on the failure mode in the practice manual |
+| Syriac asceticism (Codex Vat. Syr. 162) | "angel of light" | the state **presents as light**; external criteria (humility vs self-exaltation) |
+| Catholic (John of the Cross, *Ascent*) | *discretio spirituum* | the soul's own certainty cannot be trusted; follow the director "**even if it is very contrary to what she feels**" |
+| Tibetan Mahāmudrā (Four Yogas; Thadrak collection) | *nyams* vs *rtogs pa* | **"signs of experience"** and **"signs of realization"** kept as separate categories; faults of meditation catalogued with remedies |
+
+**What this buys.** The target phenomenon is not an artifact of a single first-person
+report: seven unrelated traditions, across languages, centuries and metaphysics,
+independently describe (i) a failure that arises when practice is going *well*,
+(ii) which presents as attainment, (iii) which more effort makes worse,
+(iv) which cannot be assessed from inside, and (v) for which an external person or test
+is prescribed. Four of those five are the model's own features, observed before any
+mechanism was available.  (The fifth feature the model has and the traditions do not
+state in these passages is the **no-critical-slowing** signature — a quantitative
+property no tradition could have recorded without instruments; see §3.7.)
+
+**What this does *not* buy.** Nothing here tests the *dynamics*. Traditions recorded
+features, not dynamics: no thresholds, no fold, no ratios, no timescales. A tradition
+noting that a state presents as attainment is evidence about the **target**, not about
+the **model's description of it** — the transition could be a fold, a saddle-node, or
+something else entirely and every passage above would read the same. Nor is the mapping
+from tradition-terms to model-terms measured: the table's right-hand column is an
+interpretation made here (§7's standing caveat applies).
+
+**Status: qualitative corroboration of the phenomenon.** It should be cited as evidence
+that the phenomenon and its features are real and widely attested, never as validation
+of the ODE. Every quantitative claim in §1–§3 stands exactly as it stood before.
+
+---
+
 ## 1. Master table — prediction → instrument → signature → falsifier → data status
 
 | # | Model prediction (measured) | External instrument / dataset | Concrete predicted signature | Falsifier | Data status |

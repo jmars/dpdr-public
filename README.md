@@ -25,6 +25,7 @@ substrate experiments.
 | `claim-audit.md` | every claim sorted into dynamical fact / marked interpretation / demoted projection |
 | `what-held.md` | the measured results that survived all revisions |
 | `dual-control.md` | the literature read that positions the contribution |
+| `dpdr/source-library-passages.md` | the tradition-attestation source record — quoted Source Library translations (CC-BY-SA-4.0; see its licence note) |
 
 ## License
 
@@ -38,6 +39,12 @@ Dual-licensed, by content type:
   author line carries the same name and ORCID iD
   ([0009-0002-5209-8161](https://orcid.org/0009-0002-5209-8161)), as does the
   Zenodo metadata (`.zenodo.json`).
+- **One exception** — the quoted passages in `dpdr/source-library-passages.md` are
+  Source Library's AI-generated translations, licensed by their source under
+  [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) with attribution
+  to Source Library, as that file's licence note states; the underlying historical
+  texts are public domain. The share-alike term attaches to reuse of those quoted
+  translations, not to the rest of this repository.
 
 ## Reproducing
 

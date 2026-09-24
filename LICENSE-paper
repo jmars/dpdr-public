@@ -15,4 +15,8 @@ deed linked above.
 
 Everything else in this repository — the code (`dpdr/`, `csd/`, and the
 standalone substrate scripts `sref2.py`, `cutred2.py`, `datalog-leg.py`) and
-the companion documents — is licensed under the MIT license; see `LICENSE`.
+the companion documents — is licensed under the MIT license; see `LICENSE`,
+with one exception: `dpdr/source-library-passages.md` quotes translations
+licensed by their source under CC-BY-SA-4.0 (attribution: Source Library,
+https://sourcelibrary.org), as stated in that file's licence note; the
+underlying historical texts are public domain.

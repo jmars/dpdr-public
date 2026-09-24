@@ -21,5 +21,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 Note: this MIT license covers the code and companion documents in this
-repository. The paper (`paper.md`) and the figures (`figures/`) are licensed
-separately under CC-BY-4.0 — see the file `LICENSE-paper`.
+repository, with one exception: `dpdr/source-library-passages.md` quotes
+translations licensed by their source under CC-BY-SA-4.0 (attribution:
+Source Library, https://sourcelibrary.org), as stated in that file's
+licence note; the underlying historical texts are public domain. The paper
+(`paper.md`) and the figures (`figures/`) are licensed separately under
+CC-BY-4.0 — see the file `LICENSE-paper`.

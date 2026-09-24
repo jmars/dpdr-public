@@ -97,6 +97,10 @@ dpdr/
 ├── tests/             gate regressions (G1–G2c) + classifier unit tests
 ├── predictions.md     Step D: P1–P6 verdicts + falsifiers + sensitivity, plus the
 │                      opt-in-variant sections (permissive AND-gate, regulator battery)
+├── external-validation.md  pre-registration dossier (§0 also records the tradition
+│                      attestation of the phenomenon, sources in source-library-passages.md)
+├── source-library-passages.md  tradition-attestation source record (quoted Source
+│                      Library translations, CC-BY-SA-4.0; see its Licence note)
 ├── figs/              generated PNGs (paper figures and the exp12/15/16 experiment
 │                      figures f16/f19/f20 cited in Appendix A)
 └── cache/             sweep caches

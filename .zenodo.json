@@ -24,5 +24,5 @@
     "Datalog"
   ],
   "license": "cc-by-4.0",
-  "notes": "Deposit license is CC-BY-4.0, covering paper.md and figures/. The code and companion documents in this repository are additionally licensed under the MIT license (see LICENSE)."
+  "notes": "Deposit license is CC-BY-4.0, covering paper.md and figures/. The code and companion documents in this repository are additionally licensed under the MIT license (see LICENSE). Exception: the quoted passages in dpdr/source-library-passages.md are Source Library translations licensed CC-BY-SA-4.0 (attribution: Source Library), as that file's licence note states; the underlying historical texts are public domain."
 }
