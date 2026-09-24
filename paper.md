@@ -109,6 +109,16 @@ Because the model's architecture was derived from a first-person report, scoring
 
 Substantive claims cite their source inline: document and section, code file:line, figure number, cache filename, or internal experiment record [TR-n] (Appendix A). Where a statement is the author's synthesis over multiple measurements rather than a single measurement, it is marked *synthesis*. Conjectures are marked *conjecture*. Where a statement reads a dynamical fact in agent vocabulary, it is marked *interpretation*; no unmarked agent vocabulary applies to the model itself (see the Status note and §6, item 14). The project's scope decision [TR-12] confines this paper to control-theoretic content; material from the source report's speculative layers is not used as a premise anywhere below.
 
+### 3.6 Use of AI assistance
+
+The research and its content originate with the author. The question — whether a self-content generator can collapse and what severs it — comes from the author's own first-person account of a meditation-adjacent collapse; the model is the author's formalization of that account; and the design decisions, the choice of measurements, the interpretations, and every claim and correction in this paper are the author's.
+
+Large language model tools were used instrumentally throughout, driven through a custom agent harness written for this project. Their role was executant rather than generative of research content: writing and refactoring the simulator code, running and re-running the numerical experiments, drafting and revising prose at the author's direction, and literature searching and summarising for the author's review. No result reported here was produced by asking a model what the answer was; the results are outputs of a specified dynamical system, computed by code.
+
+Three safeguards bound what that assistance can have introduced. First, every number in §4 is recomputed from the frozen model by an executable checker (`dpdr/reproduce.py`, 128 checks, non-zero exit on mismatch), with the exact invocation behind each number fixed in `dpdr/reproducibility.md`; the arithmetic is machine-verified rather than tool-trusted. Second, literature claims were checked against primary sources before assertion, and each entry states its access level; reading the record rather than assuming it is what produced the citation corrections recorded in Appendix A. Third, the model's architecture was derived from a first-person account whose speculative layers are excluded from the paper's premises by its scope decision (§3.5).
+
+The failure modes that AI assistance is known to introduce — fluent but unsupported prose, fabricated references, plausible-but-wrong numbers — are the ones this paper's apparatus exists to catch, and it caught them. Eleven headline claims were withdrawn during the project (§6; `followup-tracker.md`). The linear coherence pass found a same-paragraph numerical contradiction that all 128 passing checks could not see, because the checker recomputes values and never parses the prose. A coverage check found the artifact set missing the experiments behind §4.5's own third contribution. The author takes full responsibility for the contents of this record, including anything these checks did not find.
+
 ---
 
 ## 4. Results
@@ -384,6 +394,23 @@ In one frozen, fully specified self-regulating system, the same self-applicative
 
 ---
 
+## Non-use
+
+This paper models a failure mode of a self-regulating system. An accurate description of such a mechanism sits adjacent to a clinical and social territory with a documented history of misuse, so the bounds of the work are stated explicitly rather than left to the reader's judgement.
+
+The model may not be used to:
+
+1. **Assess an individual** — their state, their capacity to choose, their agency, or their vulnerability. The work contains no individual-level predictor and no validated mapping from its states to any person: no threshold here is a distribution (§6, item 8), the substrate mapping is ordinal and unvalidated (§6, item 10), and the population-level measurement that could in principle give an individual-adjacent signal — tolerated perturbation versus settling time (§4.9) — has not been run.
+2. **Justify intervention against a person's stated wishes.** A description of an environment is not a finding about a mind, and the step between them is not licensed here. The precedent is concrete and recent: the thought-reform literature was converted into a warrant for "deprogramming" — the extra-legal abduction of adults — by exactly that inference, that an individual's agency had been overborne and could therefore be acted upon on their behalf [24].
+3. **Validate or disqualify a contemplative experience**, or rank practices or persons against one another.
+4. **Restrict anyone's practice.** The regulator results (§4.3) identify a structural protection with zero healthy-regime cost; they identify no person to be stopped.
+
+These are enforceable rather than advisory, because each misuse requires departing from what the paper states: there is no individual measurement in the work, no validated model-to-person mapping, and no test result that could supply one. Misuse here is therefore not a subtle hazard but a category error, available only to a reader who has not engaged the bounds.
+
+The rule applies reflexively — to citations of this work, and to its author: **a citation that overrides a person's account of their own experience has left this work behind.**
+
+---
+
 ## Artifact availability
 
 The complete artifact set underlying this paper accompanies the paper as a public deposit. The license is chosen: the code, the cached results, and the companion documents are released under the MIT license (`LICENSE` in the artifact), and the paper and its figures under CC-BY-4.0 (`LICENSE-paper`). The DOI comes with the deposit itself; the choice of any release venue beyond it remains open. The set comprises:
@@ -445,6 +472,8 @@ The complete artifact set underlying this paper accompanies the paper as a publi
 [22] Lin, J. (2026). Self-Improvement Can Self-Regress: The Rise-and-Collapse Failure Mode of LLM Self-Training. arXiv 2606.21090 (v1, 2026-06-17). REINFORCE post-training for code (Qwen-2.5 3B/7B, binary CodeGrader reward): pass@1 rises then falls within a campaign under a per-instance-verifiable reward — class (C) of §5.1's reading. ◆ Abstract-level access; the primary has not been read in full, and the fix-family details quoted in §5.1 (CARE, ES, GRPO) are carried at that access level.
 
 [23] Wang et al. (2025). Huxley-Gödel Machine. arXiv 2510.21614. ◆ Abstract-level access only; the metaproductivity–performance mismatch characterized in §7.4 is read at abstract level.
+
+[24] On the conversion of thought-reform research into a warrant for "deprogramming": Young, E. A. (2012). The use of the "Brainwashing" Theory by the Anti-cult Movement in the United States of America, pre-1996. *Zeitschrift für junge Religionswissenschaft* 7. https://journals.openedition.org/zjr/387. The article was read in full this cycle; its primaries (the anti-cult movement's own material, and the Lifton and Singer sources it drew on) were not, and the account here is carried at the article's access level. It documents that "brainwashing" had "no reliable scientific evidence" and "a great deal of research against it," that the term was popularised by Edward Hunter — described there as an undercover CIA propaganda and psychological-warfare specialist — in a documented disinformation campaign, and that deprogramming was the extra-legal removal of adults from their communities. Cited in §Non-use, item 2, and nowhere else in the argument.
 
 ---
 
