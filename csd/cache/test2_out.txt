@@ -1,0 +1,52 @@
+==============================================================================
+TESTS 2-4: CSD DISCRIMINATOR (exact eigenvalues + protocol runs)
+fold (border collision) at eps_c = 0.265192279
+==============================================================================
+
+[TEST 2] exact dominant eigenvalue (slowest mode) vs distance-to-fold,
+         + basin-aware perturbation-recovery protocol:
+          eps       dist   lambda_dom    1/lam   basin(G)     delta      t95  lam_fit  lam_tail fix.05 recov
+      0.00000   2.65e-01    -0.001500    666.7   6.54e-01  2.62e-01     27.0      nan   0.00152          YES
+      0.10000   1.65e-01    -0.001500    666.7   2.87e-01  1.15e-01     49.0   0.0630   0.00191          YES
+      0.20000   6.52e-02    -0.001500    666.7   8.09e-02  3.24e-02     65.0   0.0468   0.04732          YES
+      0.24000   2.52e-02    -0.001500    666.7   2.77e-02  1.11e-02     69.0   0.0438   0.04401     COLLAPSE
+      0.25000   1.52e-02    -0.001500    666.7   1.62e-02  6.48e-03     70.0   0.0433   0.04343     COLLAPSE
+      0.25500   1.02e-02    -0.001500    666.7   1.07e-02  4.28e-03     70.0   0.0431   0.04317     COLLAPSE
+      0.26000   5.19e-03    -0.001500    666.7   5.37e-03  2.15e-03     70.0   0.0429   0.04293     COLLAPSE
+      0.26300   2.19e-03    -0.001500    666.7   2.25e-03  9.00e-04     71.0   0.0428   0.04280     COLLAPSE
+      0.26500   1.92e-04    -0.001500    666.7   1.96e-04  7.85e-05     71.0   0.0427   0.04271     COLLAPSE
+      0.26510   9.23e-05    -0.001500    666.7   9.41e-05  3.77e-05     71.0   0.0427   0.04271     COLLAPSE
+      0.26515   4.23e-05    -0.001500    666.7   4.31e-05  1.72e-05     71.0   0.0427   0.04270     COLLAPSE
+      0.26519   2.28e-06    -0.001500    666.7        nan  1.00e-06     71.0   0.0427   0.04270     COLLAPSE
+
+    dominant lambda across the whole approach: min -0.00150000, max -0.00150000, spread 0.00e+00
+    theory -mu/tau_g = -0.00150000  -> EXACTLY CONSTANT: recovery time 667 t.u. at every distance. NO SLOWING.
+
+[TEST 3] mode separation - every exact mode vs distance:
+          eps       dist  lam_g(slowest)      lam_S      lam_D  lam_G-mode  lam_fast
+      0.00000   2.65e-01     -0.00150000  -0.005500  -0.008800   -0.119781   -0.2000
+      0.10000   1.65e-01     -0.00150000  -0.005500  -0.008800   -0.064534   -0.3500
+      0.20000   6.52e-02     -0.00150000  -0.005500  -0.008800   -0.047326   -0.5000
+      0.24000   2.52e-02     -0.00150000  -0.005500  -0.008800   -0.044018   -0.5600
+      0.25000   1.52e-02     -0.00150000  -0.005500  -0.008800   -0.043433   -0.5750
+      0.25500   1.02e-02     -0.00150000  -0.005500  -0.008800   -0.043172   -0.5825
+      0.26000   5.19e-03     -0.00150000  -0.005500  -0.008800   -0.042932   -0.5900
+      0.26300   2.19e-03     -0.00150000  -0.005500  -0.008800   -0.042797   -0.5945
+      0.26500   1.92e-04     -0.00150000  -0.005500  -0.008800   -0.042710   -0.5975
+      0.26510   9.23e-05     -0.00150000  -0.005500  -0.008800   -0.042706   -0.5976
+      0.26515   4.23e-05     -0.00150000  -0.005500  -0.008800   -0.042704   -0.5977
+      0.26519   2.28e-06     -0.00150000  -0.005500  -0.008800   -0.042702   -0.5978
+
+    NEAR the fold (dist 5.2e-03 -> 2.3e-06, 3.4 decades): G-mode 0.042932 -> 0.042702, i.e. x0.9947 (0.53% softer)
+      sqrt (saddle-node) prediction over the same range: x47.7 softer (97.905%)
+    FAR field (eps 0 -> 0.2) the G-mode does drift: 0.119781 -> 0.047326 (x2.53) - but that is the ordinary a*-dependence of the generator's logistic stiffness, monotone in eps and ALREADY SATURATED by eps=0.24; it is not a fold precursor (see slope fits).
+    VERDICT 3: NO SOFTENING of the G-mode near the fold either -> NO CSD AT ALL
+
+[TEST 4] exponent fits log|lambda| vs log(distance) (saddle-node prediction: slope 1/2):
+    slowest g-loop, all points  : slope = -0.0000  (r2 = -1.0000)  NOT 1/2
+    G-mode, all points          : slope = +0.0474  (r2 = +0.3138)  NOT 1/2
+    G-mode, NEAR fold (last 6)  : slope = +0.0006  (r2 = +0.6408)  NOT 1/2
+    G-mode, FAR field (first 4) : slope = +0.3857  (r2 = +0.7775)  NOT 1/2
+    (slope 0 = no softening; the CSD saddle-node prediction is +0.5)
+
+  -> /home/jaye/thing/csd/cache/test2_discriminator.npz

@@ -1,0 +1,18 @@
+# License — paper and figures
+
+Copyright (c) 2026 Jaye Timothy Marshall
+
+The paper (`paper.md`) and the figures (`figures/`) in this repository are
+licensed under the Creative Commons Attribution 4.0 International license
+(CC-BY-4.0).
+
+Canonical deed: <https://creativecommons.org/licenses/by/4.0/>
+
+You are free to share and adapt the paper and figures for any purpose,
+including commercial use, provided you give appropriate credit, provide a
+link to the license, and indicate if changes were made. Full terms are in the
+deed linked above.
+
+Everything else in this repository — the code (`dpdr/`, `csd/`, and the
+standalone substrate scripts `sref2.py`, `cutred2.py`, `datalog-leg.py`) and
+the companion documents — is licensed under the MIT license; see `LICENSE`.

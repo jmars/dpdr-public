@@ -1,0 +1,17 @@
+# Python dependencies for the dpdr scientific artifact.
+#
+# Versions are PINNED deliberately, not by convention: the numerical results in
+# paper.md were produced with these exact versions, and SciPy's adaptive
+# integrator (solve_ivp) can return slightly different trajectories across
+# releases. Reproducing the paper's reported numbers therefore means reproducing
+# this environment as closely as practical.
+#
+# Python 3.13 was used. The standalone substrate scripts (sref2.py, cutred2.py,
+# datalog-leg.py) need NO dependencies beyond the standard library.
+
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+
+# Test suite only (`pytest tests/ -q` -> 53 tests).
+pytest==9.1.1

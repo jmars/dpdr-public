@@ -1,0 +1,92 @@
+==============================================================================
+TEST 1: FOLD RESOLUTION BY CONTINUATION (frozen model, chronic eps)
+==============================================================================
+
+[a] HEALTHY branch, eps 0.255 -> 0.275, step 1e-3 (warm start)
+          eps        G*       a*       S*   E-Th_eff  lambda_dom    G-mode  spectrum
+      0.25500   0.27514   0.6567   0.3576  -0.015758   -0.001500 -0.005500
+      0.25600   0.27419   0.6575   0.3568  -0.014169   -0.001500 -0.005500
+      0.25700   0.27325   0.6584   0.3560  -0.012590   -0.001500 -0.005500
+      0.25800   0.27232   0.6593   0.3552  -0.011020   -0.001500 -0.005500
+      0.25900   0.27139   0.6602   0.3544  -0.009459   -0.001500 -0.005500
+      0.26000   0.27047   0.6610   0.3536  -0.007908   -0.001500 -0.005500
+      0.26100   0.26955   0.6619   0.3528  -0.006365   -0.001500 -0.005500
+      0.26200   0.26864   0.6627   0.3521  -0.004833   -0.001500 -0.005500
+      0.26300   0.26773   0.6636   0.3513  -0.003309   -0.001500 -0.005500
+      0.26400   0.26683   0.6644   0.3505  -0.001794   -0.001500 -0.005500
+      0.26500   0.26594   0.6653   0.3498  -0.000288   -0.001500 -0.005500
+    -> warm-start continuation FAILED at eps = 0.26600 (last good 0.26500)
+
+    fine steps (1e-5) from 0.26500:
+      0.2650800  0.265870  -1.68e-04 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2650900  0.265861  -1.53e-04 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651000  0.265852  -1.38e-04 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651100  0.265843  -1.23e-04 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651200  0.265834  -1.08e-04 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651300  0.265825  -9.34e-05 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651400  0.265816  -7.84e-05 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651500  0.265807  -6.34e-05 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651600  0.265798  -4.84e-05 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651700  0.265790  -3.34e-05 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651800  0.265781  -1.84e-05 lam_dom=-0.00150000 G-mode=-0.00550000
+      0.2651900  0.265772  -3.42e-06 lam_dom=-0.00150000 G-mode=-0.00550000
+    -> died between 0.2651900 and 0.2652000
+
+  *** HEALTHY BRANCH DEATH POINT: eps_c = 0.265192279
+      state there: G*=0.265770, E-Theta_eff = -1.034e-13
+      spectrum at last resolvable point: [-0.001500, -0.005500, -0.008800, -0.042702, -0.597788]
+      dominant eigenvalue there: -0.00150000  (NOT zero?) distance from 0: 0.001500
+      |E - Theta_eff| at death: 1.034e-13  -> branch dies AT the cannibalization knee
+
+    cross-check: knee-touching eps (bisection on E-Theta_eff along the c=0 continuation):
+    knee crossing at eps = 0.265192279 (death at 0.265192279; same to ~1e-6?)
+
+[b] MIDDLE / SEPARATOR equilibrium hunt in the bistable window
+    eps=0.050: 3 equilibria  G*=0.0480(lam_dom=-0.0015,E-Th=+0.3791)  G*=0.2379(lam_dom=+1.5351,E-Th=+0.0030)  G*=0.6856(lam_dom=-0.0015,E-Th=-0.7055)
+    eps=0.100: 3 equilibria  G*=0.0476(lam_dom=-0.0015,E-Th=+0.3829)  G*=0.2443(lam_dom=+1.5499,E-Th=+0.0023)  G*=0.5309(lam_dom=-0.0015,E-Th=-0.4374)
+    eps=0.150: 3 equilibria  G*=0.0472(lam_dom=-0.0015,E-Th=+0.3863)  G*=0.2508(lam_dom=+1.5637,E-Th=+0.0016)  G*=0.4189(lam_dom=-0.0015,E-Th=-0.2521)
+    eps=0.200: 3 equilibria  G*=0.0469(lam_dom=-0.0015,E-Th=+0.3895)  G*=0.2573(lam_dom=+1.5767,E-Th=+0.0009)  G*=0.3382(lam_dom=-0.0015,E-Th=-0.1200)
+    eps=0.250: 3 equilibria  G*=0.0466(lam_dom=-0.0015,E-Th=+0.3924)  G*=0.2638(lam_dom=+1.5886,E-Th=+0.0002)  G*=0.2800(lam_dom=-0.0015,E-Th=-0.0238)
+    eps=0.260: 3 equilibria  G*=0.0465(lam_dom=-0.0015,E-Th=+0.3930)  G*=0.2651(lam_dom=+1.5909,E-Th=+0.0001)  G*=0.2705(lam_dom=-0.0015,E-Th=-0.0079)
+    eps=0.265: 3 equilibria  G*=0.0465(lam_dom=-0.0015,E-Th=+0.3933)  G*=0.2657(lam_dom=+1.5920,E-Th=+0.0000)  G*=0.2659(lam_dom=-0.0015,E-Th=-0.0003)
+
+[c] COLLAPSED branch, DECREASING eps (find the lower fold)
+    continued from eps=0.20 down to 0: 100 points; failed at eps = None
+    eps= +0.2000 G*=0.04690 a*=0.9000 E-Th_eff=+0.3895 lam_dom=-0.001500
+    eps= +0.2000 G*=0.04690 a*=0.9000 E-Th_eff=+0.3895 lam_dom=-0.001500
+    eps= +0.0020 G*=0.04847 a*=0.8826 E-Th_eff=+0.3752 lam_dom=-0.001500
+    eps=  -0.020: exists, G*=0.04869
+    eps=  -0.050: exists, G*=0.04900
+    eps=  -0.100: exists, G*=0.04957
+
+[c2] MIDDLE (saddle) branch continued UPWARD from eps=0.20: does it die at the SAME eps_c as the healthy branch?
+    652 points; died at eps = 0.26519999999999283
+    eps= 0.264600 G*=0.265692 E-Th_eff=+7.97e-06 lam_dom=+1.5920
+    eps= 0.264700 G*=0.265705 E-Th_eff=+6.63e-06 lam_dom=+1.5920
+    eps= 0.264800 G*=0.265718 E-Th_eff=+5.28e-06 lam_dom=+1.5920
+    eps= 0.264900 G*=0.265732 E-Th_eff=+3.94e-06 lam_dom=+1.5920
+    eps= 0.265000 G*=0.265745 E-Th_eff=+2.59e-06 lam_dom=+1.5920
+    eps= 0.265100 G*=0.265758 E-Th_eff=+1.24e-06 lam_dom=+1.5921
+    -> MIDDLE branch dies at eps = 0.265186670 (healthy died at 0.265192279; DIFFERENT - investigate); its unstable eigenvalue there: +1.2873 (not 0)
+
+[d] UPPER side of the collapsed branch: eps 0.20 -> 0.60
+    failed at eps = None (200 points)
+    eps=  0.2000 G*=0.04690 lam_dom=-0.001500 E-Th_eff=+0.3895
+    eps=  0.2800 G*=0.04641 lam_dom=-0.001500 E-Th_eff=+0.3941
+    eps=  0.3600 G*=0.04598 lam_dom=-0.001500 E-Th_eff=+0.3982
+    eps=  0.4400 G*=0.04560 lam_dom=-0.001500 E-Th_eff=+0.4019
+    eps=  0.5200 G*=0.04526 lam_dom=-0.001500 E-Th_eff=+0.4052
+    eps=  0.5960 G*=0.04497 lam_dom=-0.001500 E-Th_eff=+0.4080
+    eps=  0.5980 G*=0.04497 lam_dom=-0.001500 E-Th_eff=+0.4081
+
+[e] branch summary:
+    healthy death: eps_c = 0.265192279, G* = 0.265770, lam_dom = -0.001500
+    middle death:  eps  = 0.265186670, G* = 0.265769 (saddle, lam = +1.2873)
+    collapsed branch: exists for ALL eps down to 0 (no lower fold); also continues to eps~200 unbounded
+
+    => HYSTERESIS: the collapsed attractor exists at EVERY eps >= 0;
+       the healthy attractor exists only for eps < 0.265192279.
+       The window is not fold-bounded on the low side: collapse is IRREVERSIBLE
+       by withdrawal of drive alone (matches exp2 relapse phenomenology).
+
+  -> /home/jaye/thing/csd/cache/test1_fold.npz
